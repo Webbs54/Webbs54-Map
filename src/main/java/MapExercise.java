@@ -27,7 +27,8 @@ public class MapExercise {
      * so here Integer is a wrapper for int.
      */
     public Map<Integer, String> createMap(){
-        return null;
+        Map<Integer,String> map =new HashMap<Integer,String>();  
+        return map;
     }
 
     /**
@@ -37,7 +38,7 @@ public class MapExercise {
      */
     public int getSize(Map<Integer,String> map){
 //        return total number of key/value pairs in the map
-        return 0;
+        return map.size();
     }
 
     /**
@@ -47,7 +48,9 @@ public class MapExercise {
      * @param value the value of the new pair.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addKeyValuePair(Map<Integer,String> map, int key, String value){
+    public void addKeyValuePair(Map<Integer,String> map, int key, String value)
+    {
+        map.put(key,value);
     }
 
     /**
@@ -56,8 +59,9 @@ public class MapExercise {
      * @param key the key corresponding to the value we will be retrieving.
      * @return the value associated with key in map.
      */
-    public String getValueFromKey(Map<Integer, String> map, int key){
-        return "";
+    public String getValueFromKey(Map<Integer, String> map, int key)
+    {
+        return map.get(key);
     }
 
     /**
@@ -66,7 +70,9 @@ public class MapExercise {
      * @param key the key corresponding to the pair we will be deleting.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void removeKeyValuePair(Map<Integer, String> map, int key){
+    public void removeKeyValuePair(Map<Integer, String> map, int key)
+    {
+        map.remove(key);
     }
 
     /**
@@ -76,7 +82,8 @@ public class MapExercise {
      * @param value the new value that should be associated with key.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void overwriteValue(Map<Integer, String> map, int key, String value){
-
+    public void overwriteValue(Map<Integer, String> map, int key, String value)
+    {
+        map.put(key,value);
     }
 }
